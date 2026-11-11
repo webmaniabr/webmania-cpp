@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(WebmaniaCppHomologacao LANGUAGES CXX)
+find_package(WebmaniaCpp CONFIG REQUIRED)
+add_executable(homologacao main.cpp)
+target_compile_features(homologacao PRIVATE cxx_std_17)
+target_compile_options(homologacao PRIVATE -Wall -Wextra)
+target_link_libraries(homologacao PRIVATE Webmania::cpp)
